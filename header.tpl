@@ -17,9 +17,14 @@
     }
     td.week-sun { background: #ffcccc; }
     td.week-sat { background: #ccccff; }
-    td.today {
-      background: #222222;
-      color: #ffffff;
+    .size-2 { font-size: 120%; }
+    .size-3 { font-size: 140%; }
+    .size-4 { font-size: 160%; }
+    a:link { color: #ff8050; }
+    a:visited { color: #995080; }
+    a:hover {
+      color: #ff0090;
+      text-decoration: none;
     }
   </style>
 </head>
