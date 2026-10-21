@@ -16,6 +16,8 @@ class DB {
         $this->config['db']['password'],
         array(
           PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+          // PHP 8.0 で既定が例外に変わったため、7.4 と同じ挙動に固定
+          PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
         ));
     } catch (PDOException $e) {
       exit("db connection error: " . $e->getMessage());
