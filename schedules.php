@@ -3,6 +3,8 @@
 require_once 'db.php';
 
 class SchedulesTable {
+  public $config;
+  public $db;
   function __construct() {
     $this->config = &$GLOBALS['config'];
     $this->db = DB::getInstance();

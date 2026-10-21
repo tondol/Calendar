@@ -29,6 +29,11 @@ class Util {
 }
 
 class DayElement {
+  public $year;
+  public $month;
+  public $day;
+  public $week;
+
   public function __construct($year, $month, $day, $week) {
     $this->year = $year;
     $this->month = $month;
@@ -58,6 +63,9 @@ class DayElement {
 }
 
 class Calendar {
+  public $year;
+  public $month;
+
   public function __construct($year, $month) {
     $this->year = $year;
     $this->month = $month;
@@ -90,6 +98,11 @@ class Calendar {
 }
 
 class CalendarRenderer {
+  public $weekKeys;
+  public $weekValues;
+  public $calendar;
+  public $schedulesTable;
+
   function __construct($calendar) {
     $this->weekKeys = array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
     $this->weekValues = array('日', '月', '火', '水', '木', '金', '土');
@@ -179,6 +192,11 @@ class CalendarRenderer {
 }
 
 class SchedulesRenderer {
+  public $schedulesTable;
+  public $year;
+  public $month;
+  public $day;
+
   function __construct($year, $month, $day) {
     $this->schedulesTable = new SchedulesTable();
     $this->year = $year;

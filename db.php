@@ -2,6 +2,8 @@
 
 class DB {
   private static $instance;
+  public $config;
+  public $db;
   function __construct() {
     $this->config = &$GLOBALS['config'];
     $this->db = $this->getDB();
